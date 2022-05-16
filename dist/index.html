@@ -4,12 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <input id="location-search" type="text" />
-    <button onclick="getWeatherAPI()"></button>
-    <button id="convert">convert</button>
+    <div class="container">
+      <section class="left-panel">
+        <div class="tag-name">
+          <p>the.weather</p>
+        </div>
+        <div class="main-container">
+          <div class="temperature"><p>26*</p></div>
+          <div class="location-information">
+            <div class="city">London</div>
+            <div class="date-time">Monday, 16th May 22 on 11:47</div>
+          </div>
+          <div class="weather">
+            <div class="weather-icon">🎇</div>
+            <div class="weather-desciption">Sunny</div>
+          </div>
+        </div>
+      </section>
+      <section class="right-panel">
+        <div class="search-panel">
+          <div class="search-bar">
+            <input type="text" placeholder="Another location" />
+            <button class="search-btn"></button>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div class="weatrher-details-name">Weather Details</div>
+          <div class="weather-detail-lists">
+            <ul>
+              <li>
+                <div class="detail-lists-item">Cloudy:</div>
+              </li>
+              <li>
+                <div class="detail-lists-item">Humidity:</div>
+              </li>
+              <li>
+                <div class="detail-lists-item">Wind:</div>
+              </li>
+              <li>
+                <div class="detail-lists-item">Rain:</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
   <script src="../src/index.js"></script>
 </html>
