@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -28,25 +32,51 @@
       <section class="right-panel">
         <div class="search-panel">
           <div class="search-bar">
-            <input type="text" placeholder="Another location" />
-            <button class="search-btn"></button>
+            <input
+              type="text"
+              class="input-search"
+              placeholder="Another location"
+            />
           </div>
+          <button class="search-btn">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+        <div>
+          <ul class="city-list">
+            <li class="city-item grey-text">New York</li>
+            <li class="city-item grey-text">London</li>
+            <li class="city-item grey-text">Paris</li>
+            <li class="city-item grey-text">Ho Chi Minh</li>
+          </ul>
         </div>
         <div class="weather-details">
-          <div class="weatrher-details-name">Weather Details</div>
-          <div class="weather-detail-lists">
-            <ul>
+          <div class="weather-details-name white-text">Weather Details</div>
+          <div>
+            <ul class="weather-detail-lists">
               <li>
-                <div class="detail-lists-item">Cloudy:</div>
+                <div class="detail-lists-item">
+                  <p class="grey-text">Cloudy:</p>
+                  <p class="white-text">12%</p>
+                </div>
               </li>
               <li>
-                <div class="detail-lists-item">Humidity:</div>
+                <div class="detail-lists-item">
+                  <p class="grey-text">Humidity:</p>
+                  <p class="white-text">12%</p>
+                </div>
               </li>
               <li>
-                <div class="detail-lists-item">Wind:</div>
+                <div class="detail-lists-item">
+                  <p class="grey-text">Wind:</p>
+                  <p class="white-text">12%</p>
+                </div>
               </li>
               <li>
-                <div class="detail-lists-item">Rain:</div>
+                <div class="detail-lists-item">
+                  <p class="grey-text">Rain:</p>
+                  <p class="white-text">12%</p>
+                </div>
               </li>
             </ul>
           </div>
