@@ -18,14 +18,18 @@
           <p>the.weather</p>
         </div>
         <div class="main-container">
-          <div class="temperature"><p>26*</p></div>
+          <div class="temperature" id="temperature">
+            <p></p>
+          </div>
           <div class="location-information">
-            <div class="city">London</div>
-            <div class="date-time">Monday, 16th May 22 on 11:47</div>
+            <div class="city" id="current-city"></div>
+            <div class="date-time" id="date-time"></div>
           </div>
           <div class="weather">
-            <div class="weather-icon">🎇</div>
-            <div class="weather-desciption">Sunny</div>
+            <div class="weather-icon">
+              <svg id="weather-icon"></svg>
+            </div>
+            <div class="weather-desciption" id="weather-description">Sunny</div>
           </div>
         </div>
       </section>
@@ -36,6 +40,7 @@
               type="text"
               class="input-search"
               placeholder="Another location"
+              id="location-search"
             />
           </div>
           <button class="search-btn">
@@ -44,10 +49,10 @@
         </div>
         <div>
           <ul class="city-list">
-            <li class="city-item grey-text">New York</li>
-            <li class="city-item grey-text">London</li>
-            <li class="city-item grey-text">Paris</li>
-            <li class="city-item grey-text">Ho Chi Minh</li>
+            <li class="city-item grey-text" id="new-york">New York</li>
+            <li class="city-item grey-text" id="london">London</li>
+            <li class="city-item grey-text" id="paris">Paris</li>
+            <li class="city-item grey-text" id="ho-chi-minh">Ho Chi Minh</li>
           </ul>
         </div>
         <div class="weather-details">
@@ -57,25 +62,25 @@
               <li>
                 <div class="detail-lists-item">
                   <p class="grey-text">Cloudy:</p>
-                  <p class="white-text">12%</p>
+                  <p class="white-text" id="cloudy"></p>
                 </div>
               </li>
               <li>
                 <div class="detail-lists-item">
                   <p class="grey-text">Humidity:</p>
-                  <p class="white-text">12%</p>
+                  <p class="white-text" id="humidity"></p>
                 </div>
               </li>
               <li>
                 <div class="detail-lists-item">
                   <p class="grey-text">Wind:</p>
-                  <p class="white-text">12%</p>
+                  <p class="white-text" id="wind"></p>
                 </div>
               </li>
               <li>
                 <div class="detail-lists-item">
                   <p class="grey-text">Rain:</p>
-                  <p class="white-text">12%</p>
+                  <p class="white-text" id="rain"></p>
                 </div>
               </li>
             </ul>
@@ -84,5 +89,5 @@
       </section>
     </div>
   </body>
-  <script src="../src/index.js"></script>
+  <script type="module" src="../src/index.js"></script>
 </html>
