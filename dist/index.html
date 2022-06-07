@@ -18,18 +18,18 @@
           <p>the.weather</p>
         </div>
         <div class="main-container">
-          <div class="temperature" id="temperature">
-            <p></p>
-          </div>
+          <a href="#" class="temperature">
+            <div id="temperature">
+              <p></p>
+            </div>
+          </a>
           <div class="location-information">
             <div class="city" id="current-city"></div>
             <div class="date-time" id="date-time"></div>
           </div>
           <div class="weather">
-            <div class="weather-icon">
-              <svg id="weather-icon"></svg>
-            </div>
-            <div class="weather-desciption" id="weather-description">Sunny</div>
+            <div class="weather-icon" id="weather-icon"></div>
+            <div class="weather-desciption" id="weather-description"></div>
           </div>
         </div>
       </section>
@@ -38,7 +38,7 @@
           <div class="search-bar">
             <input
               type="text"
-              class="input-search"
+              class="input-search white-text"
               placeholder="Another location"
               id="location-search"
             />
@@ -49,10 +49,18 @@
         </div>
         <div>
           <ul class="city-list">
-            <li class="city-item grey-text" id="new-york">New York</li>
-            <li class="city-item grey-text" id="london">London</li>
-            <li class="city-item grey-text" id="paris">Paris</li>
-            <li class="city-item grey-text" id="ho-chi-minh">Ho Chi Minh</li>
+            <li class="city-item">
+              <a id="new-york" class="grey-text" href="#">New York</a>
+            </li>
+            <li class="city-item">
+              <a id="london" class="grey-text" href="#">London</a>
+            </li>
+            <li class="city-item">
+              <a id="paris" class="grey-text" href="#">Paris</a>
+            </li>
+            <li class="city-item">
+              <a id="ho-chi-minh" class="grey-text" href="#">Ho Chi Minh</a>
+            </li>
           </ul>
         </div>
         <div class="weather-details">

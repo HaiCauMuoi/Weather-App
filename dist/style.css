@@ -60,14 +60,19 @@ body {
 }
 
 .temperature {
+  text-decoration: none;
   grid-row: 2 / 3;
   grid-column: 1 /2;
   color: #fff;
-  font-size: 5rem;
+  font-size: 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
+}
+
+#temperature {
+  margin-right: 1rem;
 }
 
 .location-information {
@@ -87,6 +92,7 @@ body {
 .city {
   font-size: 2.2rem;
   font-family: 'Publica Sans Light';
+  line-height: 2.1rem;
 }
 
 .weather {
@@ -104,7 +110,12 @@ body {
 }
 
 .weather-icon {
-  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.date-time {
+  font-size: 0.8rem;
 }
 
 .search-panel {
@@ -126,6 +137,11 @@ body {
   color: #fff;
   height: 2rem;
   font-family: 'Publica Sans Thin';
+}
+
+.input-search::placeholder {
+  color: #fff;
+  opacity: 0.5;
 }
 
 .input-search:focus {
@@ -178,10 +194,15 @@ body {
   margin-left: 1rem;
 }
 
-.city-item:hover {
+.city-item:hover,
+.city-item:hover > a {
   background-color: #fff;
   opacity: 0.3;
   color: black;
+}
+
+.city-item > a {
+  text-decoration: none;
 }
 
 .weather-details-name {
