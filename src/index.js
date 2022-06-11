@@ -1,4 +1,4 @@
-import view from "./app/DOM";
+import view from './app/DOM';
 
 function getLocation() {
   const locationSearch = document.getElementById('location-search');
@@ -6,12 +6,10 @@ function getLocation() {
   return location;
 }
 
-
 async function getWeatherAPI(location) {
   const api = `http://api.openweathermap.org/data/2.5/weather?q=${location}
   &units=metric&APPID=61143bcabab93bed1de9b4d47e030e70`;
-  const respone = await fetch(api,
-    { mode: 'cors' });
+  const respone = await fetch(api, { mode: 'cors' });
   const fetchData = await respone.json();
   const fetchTime = new Date(fetchData.dt * 1000);
   const options = {
@@ -52,14 +50,12 @@ async function getWeatherAPI(location) {
 getWeatherAPI('ha noi');
 searchBtn.addEventListener('click', getWeatherAPI(getLocation()));
 
-
 // newYork.addEventListener('click', getWeatherAPI('new york'));
 // london.addEventListener('click', getWeatherAPI('london'));
 // paris.addEventListener('click', getWeatherAPI('paris'));
 // hoChiMinh.addEventListener('click', getWeatherAPI('ho Chi Minh'));
 
 // let ATTEMP = 1;
-
 
 // async function convert() {
 //   const search = getLocation();
