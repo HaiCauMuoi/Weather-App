@@ -1,3 +1,5 @@
+// ASSIGNING SVGS TO VARIABLES IN A MAP
+
 const statusIcon = new Map()
   .set(
     '01d',
