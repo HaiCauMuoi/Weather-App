@@ -1,1 +1,1 @@
-export { getLocation, getWeatherAPI, convert };
+
