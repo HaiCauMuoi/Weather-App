@@ -6,6 +6,8 @@
   body {
     box-sizing: border-box;
     font-family: 'Publica Sans Light';
+    background: url('img/clear-sky.jpg') right bottom fixed;
+
     font-size: 62.5%;
   }
   

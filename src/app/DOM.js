@@ -1,5 +1,5 @@
 // IMPORTING WEATHER ICON
-
+import weather from './API_Function';
 import statusIcon from './Icon';
 
 const view = {
@@ -16,17 +16,22 @@ const view = {
     const rain = document.getElementById('rain');
 
     // DISPLAYING DATA TO SCREEN
-    temperature.innerHTML = `${data.temperature}\u00B0C`;
     currentCity.innerHTML = data.city;
     dateTime.innerHTML = data.time;
     cloudy.innerHTML = `${data.cloud}%`;
     humidity.innerHTML = `${data.humidity}%`;
-    wind.innerHTML = `${data.wind_speed}m/s`;
     rain.innerHTML = `${data.rain}%`;
     weatherDescription.innerHTML = `${data.description}`;
     // GETTING ICON SVG FROM THE MAP DECLARED IN ICON.JS
     const iconElement = statusIcon.get(data.icon);
     weatherIcon.innerHTML = iconElement;
+    if (weather.ATTEMP === 1) {
+      temperature.innerHTML = `${data.temperature}\u00B0C`;
+      wind.innerHTML = `${data.wind_speed}km/h`;
+    } else {
+      temperature.innerHTML = `${data.temperature}\u00B0F`;
+      wind.innerHTML = `${data.wind_speed}mph`;
+    }
   },
 };
 

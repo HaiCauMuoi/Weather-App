@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const weather = {
   convertData(data) {
     // DATE MANIPULATION
@@ -30,9 +31,17 @@ const weather = {
 
     return weatherData;
   },
+
+  ATTEMP: 1,
+  getState() {
+    if (this.ATTEMP === 1) {
+      return 'metric';
+    }
+    return 'imperial';
+  },
   // GETTING DATA FROM API
   async getData(location) {
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=61143bcabab93bed1de9b4d47e030e70`;
+    const api = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${this.getState()}&APPID=61143bcabab93bed1de9b4d47e030e70`;
     try {
       // FETCHING DATA
       const response = await fetch(api, { mode: 'cors' });
@@ -46,7 +55,6 @@ const weather = {
       return null;
     }
   },
-
 };
 
 export default weather;

@@ -11,6 +11,20 @@ const newYork = document.getElementById('new-york');
 const london = document.getElementById('london');
 const paris = document.getElementById('paris');
 const hoChiMinh = document.getElementById('ho-chi-minh');
+// CHANGING DATA METRIC
+const temperatureMetric = document.getElementById('temperature');
+const getUnit = (location) => {
+  temperatureMetric.addEventListener('click', async () => {
+    if (weather.ATTEMP === 1) { weather.ATTEMP++; } else { weather.ATTEMP--; }
+    view.getDOM(await weather.getData(location));
+  });
+};
+// DEFAULT WEATHER DATA
+const defaultData = async () => {
+  view.getDOM(await weather.getData('Ha Noi'));
+};
+
+defaultData();
 
 // QUICK SEARCH FOR WEATHER DATA
 newYork.addEventListener('click', async () => {
@@ -33,52 +47,6 @@ hoChiMinh.addEventListener('click', async () => {
 searchBtn[0].addEventListener('click', async () => {
   if (locationSearch.value === '') return;
   const weatherData = await weather.getData(locationSearch.value);
+  getUnit(locationSearch.value);
   view.getDOM(weatherData);
 });
-
-// ZOMBIE CODE
-
-// let ATTEMP = 1;
-
-// async function convert() {
-//   const search = getLocation();
-//   const unit = getState(ATTEMP);
-//   const text = await fetch(
-//     `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=${unit}&APPID=61143bcabab93bed1de9b4d47e030e70`,
-//     { mode: 'cors' }
-//   );
-//   const fetch_data = await text.json();
-//   const fetchTime = new Date(fetch_data.dt * 1000);
-//   const options = {
-//     hc: '24',
-//     weekday: 'long',
-//     year: '2-digit',
-//     month: 'long',
-//     day: '2-digit',
-//     hour: '2-digit',
-//     minute: '2-digit',
-//   };
-//   const time = fetchTime.toLocaleDateString('en-GB', options);
-//   const data = await {
-//     city: fetch_data.name,
-//     temperature: Math.round(fetch_data.main.temp),
-//     humidity: fetch_data.main.humidity,
-//     wind_speed: fetch_data.wind.speed,
-//     time,
-//   };
-
-//   temperature.innerHTML = await data.temperature;
-//   currentCity.innerHTML = await data.city;
-//   dateTime.innerHTML = await data.time;
-//   console.log('ok');
-//   return data, time;
-// }
-
-// function getState() {
-//   if (ATTEMP === 1) {
-//     ATTEMP++;
-//     return 'metric';
-//   }
-//   ATTEMP--;
-//   return 'imperial';
-// }
