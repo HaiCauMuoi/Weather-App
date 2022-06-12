@@ -1,238 +1,238 @@
 * {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: 'Publica Sans Light';
-  font-size: 62.5%;
-}
-
-.container {
-  width: 800px;
-  height: 500px;
-  background: url('img/clear-sky.jpg') right bottom fixed;
-  background-size: 1000px 700px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  z-index: 0;
-}
-
-.left-panel {
-  width: 60%;
-  height: 100%;
-  z-index: 1;
-}
-
-.right-panel {
-  width: 40%;
-  height: 100%;
-  z-index: 1;
-  display: grid;
-  grid-template-rows: 12.5% 40% 47.5%;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.tag-name {
-  width: 50%;
-  height: 25%;
-  color: #fff;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tag-name > p {
-  margin-left: 2rem;
-}
-
-.main-container {
-  height: 75%;
-  display: grid;
-  grid-template-columns: 40% 30% 25%;
-  grid-template-rows: auto auto;
-}
-
-.temperature {
-  text-decoration: none;
-  grid-row: 2 / 3;
-  grid-column: 1 /2;
-  color: #fff;
-  font-size: 4rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  cursor: pointer;
-}
-
-#temperature {
-  margin-right: 1rem;
-}
-
-.location-information {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-  color: #fff;
-  font-size: 0.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  font-family: 'Publica Sans Thin';
-  line-height: 1.5rem;
-  margin-left: 1rem;
-}
-
-.city {
-  font-size: 2.2rem;
-  font-family: 'Publica Sans Light';
-  line-height: 2.1rem;
-}
-
-.weather {
-  grid-row: 2 / 3;
-  grid-column: 3 / 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  font-size: 1rem;
-  color: #fff;
-  line-height: 1.5rem;
-  font-family: 'Publica Sans Thin';
-  margin-left: 1rem;
-}
-
-.weather-icon {
-  width: 1rem;
-  height: 1rem;
-}
-
-.date-time {
-  font-size: 0.8rem;
-}
-
-.search-panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.search-bar {
-  width: 62.5%;
-  border-bottom: 0.5px solid #669dc4;
-  margin-left: 2.5rem;
-}
-
-.input-search {
-  border: none;
-  background-color: transparent;
-  font-size: 0.8rem;
-  color: #fff;
-  height: 2rem;
-  font-family: 'Publica Sans Thin';
-}
-
-.input-search::placeholder {
-  color: #fff;
-  opacity: 0.5;
-}
-
-.input-search:focus {
-  border: none;
-  appearance: none;
-  -moz-appearance: none;
-  outline: none;
-}
-
-.search-btn {
-  height: 100%;
-  width: 18%;
-  background-color: #fff;
-  filter: opacity(0.4);
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.search-btn:hover {
-  opacity: 0.6;
-}
-
-.material-symbols-outlined {
-  font-size: 2rem;
-  opacity: 0.5;
-}
-
-.city-list {
-  list-style: none;
-  width: 70%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  border-bottom: 0.5px solid #669dc4;
-}
-
-.city-item {
-  font-family: 'Publica Sans Thin';
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.12s;
-  padding-left: 1.5rem;
-  margin-left: 1rem;
-}
-
-.city-item:hover,
-.city-item:hover > a {
-  background-color: #fff;
-  opacity: 0.3;
-  color: black;
-}
-
-.city-item > a {
-  text-decoration: none;
-}
-
-.weather-details-name {
-  width: 80%;
-  height: 5rem;
-  margin-left: 2.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.weather-detail-lists {
-  list-style: none;
-}
-
-.detail-lists-item {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  height: 40px;
-  margin-left: 2.5rem;
-}
-
-.grey-text {
-  color: #fff;
-  opacity: 0.5;
-  font-size: 0.8rem;
-}
-
-.white-text {
-  color: #fff;
-  opacity: 1;
-  font-size: 0.8rem;
-}
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    box-sizing: border-box;
+    font-family: 'Publica Sans Light';
+    font-size: 62.5%;
+  }
+  
+  .container {
+    width: 800px;
+    height: 500px;
+    background: url('img/clear-sky.jpg') right bottom fixed;
+    background-size: 1000px 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    z-index: 0;
+  }
+  
+  .left-panel {
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .right-panel {
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 12.5% 40% 47.5%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .tag-name {
+    width: 50%;
+    height: 25%;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tag-name > p {
+    margin-left: 2rem;
+  }
+  
+  .main-container {
+    height: 75%;
+    display: grid;
+    grid-template-columns: 40% 30% 25%;
+    grid-template-rows: auto auto;
+  }
+  
+  .temperature {
+    text-decoration: none;
+    grid-row: 2 / 3;
+    grid-column: 1 /2;
+    color: #fff;
+    font-size: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #temperature {
+    margin-right: 1rem;
+  }
+  
+  .location-information {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    color: #fff;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Publica Sans Thin';
+    line-height: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+  .city {
+    font-size: 2.2rem;
+    font-family: 'Publica Sans Light';
+    line-height: 2.1rem;
+  }
+  
+  .weather {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5rem;
+    font-family: 'Publica Sans Thin';
+    margin-left: 1rem;
+  }
+  
+  .weather-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .date-time {
+    font-size: 0.8rem;
+  }
+  
+  .search-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .search-bar {
+    width: 62.5%;
+    border-bottom: 0.5px solid #669dc4;
+    margin-left: 2.5rem;
+  }
+  
+  .input-search {
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: #fff;
+    height: 2rem;
+    font-family: 'Publica Sans Thin';
+  }
+  
+  .input-search::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+  
+  .input-search:focus {
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    outline: none;
+  }
+  
+  .search-btn {
+    height: 100%;
+    width: 18%;
+    background-color: #fff;
+    filter: opacity(0.4);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .search-btn:hover {
+    opacity: 0.6;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 2rem;
+    opacity: 0.5;
+  }
+  
+  .city-list {
+    list-style: none;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid #669dc4;
+  }
+  
+  .city-item {
+    font-family: 'Publica Sans Thin';
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.12s;
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+  .city-item:hover,
+  .city-item:hover > a {
+    background-color: #fff;
+    opacity: 0.3;
+    color: black;
+  }
+  
+  .city-item > a {
+    text-decoration: none;
+  }
+  
+  .weather-details-name {
+    width: 80%;
+    height: 5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-detail-lists {
+    list-style: none;
+  }
+  
+  .detail-lists-item {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 40px;
+    margin-left: 2.5rem;
+  }
+  
+  .grey-text {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 0.8rem;
+  }
+  
+  .white-text {
+    color: #fff;
+    opacity: 1;
+    font-size: 0.8rem;
+  }

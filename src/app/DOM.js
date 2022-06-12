@@ -1,9 +1,10 @@
 // IMPORTING WEATHER ICON
+
 import statusIcon from './Icon';
 
-const view = () => {
+const view = {
   // DOM MANIPULATION
-  function getDOM(data) {
+  getDOM(data) {
     const temperature = document.getElementById('temperature');
     const currentCity = document.getElementById('current-city');
     const dateTime = document.getElementById('date-time');
@@ -13,7 +14,6 @@ const view = () => {
     const humidity = document.getElementById('humidity');
     const wind = document.getElementById('wind');
     const rain = document.getElementById('rain');
-    const icon = statusIcon;
 
     // DISPLAYING DATA TO SCREEN
     temperature.innerHTML = `${data.temperature}\u00B0C`;
@@ -25,11 +25,9 @@ const view = () => {
     rain.innerHTML = `${data.rain}%`;
     weatherDescription.innerHTML = `${data.description}`;
     // GETTING ICON SVG FROM THE MAP DECLARED IN ICON.JS
-    const iconElement = icon.get(data.icon);
+    const iconElement = statusIcon.get(data.icon);
     weatherIcon.innerHTML = iconElement;
-  }
-
-  return getDOM();
+  },
 };
 
 export default view;

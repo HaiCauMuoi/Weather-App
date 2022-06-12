@@ -1,5 +1,5 @@
-const weather = () => {
-  function convertData(data) {
+const weather = {
+  convertData(data) {
     // DATE MANIPULATION
     const fetchTime = new Date(data.dt * 1000);
     const options = {
@@ -29,27 +29,24 @@ const weather = () => {
     };
 
     return weatherData;
-  }
-
+  },
   // GETTING DATA FROM API
-  async function getData(location) {
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${location}
-  &units=metric&APPID=61143bcabab93bed1de9b4d47e030e70`;
+  async getData(location) {
+    const api = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=61143bcabab93bed1de9b4d47e030e70`;
     try {
       // FETCHING DATA
       const response = await fetch(api, { mode: 'cors' });
       if (!response.ok) throw new Error(`City ${location} not found`);
       const fetchData = await response.json();
 
-      const data = convertData(fetchData);
+      const data = this.convertData(fetchData);
       return data;
     } catch {
-      alert(error);
+      // eslint-disable-next-line no-alert
       return null;
     }
-  }
+  },
 
-  return getData;
 };
 
-export { weather };
+export default weather;
